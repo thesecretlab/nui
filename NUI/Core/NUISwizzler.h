@@ -13,5 +13,6 @@
 @interface NUISwizzler : NSObject
 
 - (void)swizzleAll;
+- (void)swizzleClass:(Class)aClass;
 
 @end

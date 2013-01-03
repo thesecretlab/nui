@@ -27,6 +27,10 @@
     [self swizzleAwakeFromNib:[UITabBarItem class]];
 }
 
+- (void)swizzleClass:(Class)aClass {
+    [self swizzleDidMoveToWindow:aClass];
+}
+
 - (void)swizzleAwakeFromNib:(Class)class
 {
     [self swizzle:class from:@selector(awakeFromNib) to:@selector(override_awakeFromNib)];
